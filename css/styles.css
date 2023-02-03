@@ -122,12 +122,28 @@ img {
 }
 
 .nav-link {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    position: relative;
+    padding-top: 26px;
+    padding-bottom: 26px;
     color: var(--primary-text-color);
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+
+.nav-link.current {
+    color: var(--buttons-active-bgc-color);
+}
+
+.nav-link.current::after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--buttons-active-bgc-color);
 }
 
 .nav-link:hover,
